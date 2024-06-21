@@ -42,7 +42,7 @@ function VideoContainer() {
     <div className="grid grid-cols-3 gap-5  h-[calc(100vh-4.625rem)] overflow-y-scroll overflow-x-hidden no-scrollbar">
       {videos.map((item,index) => {
         return (
-          <Link key={index} to={`/watch?V=${item.id}`}>
+          <Link key={index} to={`/watch?V=${typeof item.id=== 'object'? item.id.videoId :item.id}`}>
             <VideoCart item={item}  />
           </Link>
         );

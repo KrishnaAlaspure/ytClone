@@ -19,3 +19,15 @@
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
+
+.scrollbar::-webkit-scrollbar {
+  width: 5px;
+}
+
+.scrollbar::-webkit-scrollbar-track { 
+  background: #fff;
+}
+
+.scrollbar::-webkit-scrollbar-thumb { 
+  background:#a7a4a4;
+}

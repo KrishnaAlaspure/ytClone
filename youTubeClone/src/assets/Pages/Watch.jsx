@@ -42,7 +42,7 @@ function Watch() {
       const res = await axios.get(
         `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&id=${videoId}&key=${API_KEY}`
       );
-      
+      console.log(res.data);
       setSingleVideo(res.data.items[0]);
     } catch (error) {
       console.log(error);
@@ -76,7 +76,7 @@ function Watch() {
             <div className="flex items-center mr-2">
               <div className="mr-2">
                 <Avatar
-                  src="https://yt3.ggpht.com/bN5ULrP00l4Ic7QNczLXf1Rjo90bWnEDNnX1pHHM1MChwJnsU0xtQem_R3zREzr2WHDjl3ApTQ=s48-c-k-c0x00ffffff-no-rj"
+                  src="https://avatar.iran.liara.run/public/boy?username=scout"
                   size={40}
                   round={true}
                   className=""
@@ -128,14 +128,14 @@ function Watch() {
             <h1 className="">Top Chat</h1>
             <BsThreeDotsVertical className=""/>
         </div>
-        <div className="overflow-y-auto h-[28rem] flex flex-col-reverse ">
+        <div className="overflow-y-auto h-[28rem] flex flex-col-reverse scrollbar">
             <LiveChat/>
         </div>
         <div className="border-t-2">
             <div className="flex items-center justify-around mt-5">
                 <div>
                 <Avatar
-                  src="https://yt3.ggpht.com/bN5ULrP00l4Ic7QNczLXf1Rjo90bWnEDNnX1pHHM1MChwJnsU0xtQem_R3zREzr2WHDjl3ApTQ=s48-c-k-c0x00ffffff-no-rj"
+                  src="https://avatar.iran.liara.run/public/boy?username=random"
                   size={40}
                   round={true}
                   className=""

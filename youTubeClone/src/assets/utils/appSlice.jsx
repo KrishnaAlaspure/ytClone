@@ -5,7 +5,8 @@ const appSlice = createSlice({
     initialState: {
         toggle:true,
         video:[],
-        category:"All"
+        category:"All",
+        searchSuggestion:[]
     },
     reducers: {
         toggleSideBar:(state)=>{
@@ -16,10 +17,13 @@ const appSlice = createSlice({
         },
         setCategory:(state,action)=>{
             state.category=action.payload
-        }
+        },
+        setSearchSuggestion:(state,action)=>{
+            state.searchSuggestion=action.payload
+        },
     }
 })
 
 
 export default appSlice.reducer
-export const {toggleSideBar,setCategory,setHomeVideo}=appSlice.actions
+export const {toggleSideBar,setCategory,setHomeVideo,setSearchSuggestion}=appSlice.actions
